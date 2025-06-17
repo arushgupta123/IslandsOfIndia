@@ -63,58 +63,67 @@
         }
 
 
-        #fb1 {
-    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
-    border-radius: 15px; /* Rounded corners for a softer look */
-    padding: 30px; /* Ample space inside the box */
-    margin-top: 20px; /* Space above the fact box */
-    margin-bottom: 20px; /* Space below the fact box */
-    width: 80%; /* Control the width, make it responsive */
-    max-width: 800px; /* Prevent it from getting too wide on large screens */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    text-align: left; /* Align text to the left within the box */
+        #heading2, #heading3 { /* Applied to both heading2 and heading3 */
+    font-size: 80px;
+    color: #333; /* Darker text for readability on the light fact box */
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Subtle text shadow */
+}
+
+/* Re-using the #fb1 styles for #fb2 to maintain consistency */
+#fb1, #fb2 {
+    background-color: rgba(250, 250, 250, 0.95); /* A clean, almost white with slight opacity for the fact box */
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 800px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    text-align: left;
     color: #333; /* Darker text for readability */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
-    line-height: 1.6; /* Good line spacing for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
-#fb1 ul {
-    list-style-type: none; /* Remove default bullet points */
-    padding: 0; /* Remove default padding from ul */
+#fb1 ul, #fb2 ul { /* Apply to both fact boxes' ul */
+    list-style-type: none;
+    padding: 0;
 }
 
-#fb1 ul li {
-    margin-bottom: 15px; /* Space between main list items */
-    font-size: 1.1em; /* Slightly larger font for main points */
-    padding-left: 25px; /* Indent for custom bullet */
-    position: relative; /* For custom bullet positioning */
+#fb1 ul li, #fb2 ul li { /* Apply to both fact boxes' li */
+    margin-bottom: 15px;
+    font-size: 1.1em;
+    padding-left: 25px;
+    position: relative;
 }
 
-#fb1 ul li::before {
-    content: '•'; /* Custom bullet point */
-    color: rgb(0, 128, 87); /* Match bullet color to your gradient */
-    font-size: 1.5em; /* Make bullet larger */
+#fb1 ul li::before, #fb2 ul li::before { /* Apply to both fact boxes' custom bullets */
+    content: '•';
+    color: #0072FF; /* Using the darker blue from your body gradient for bullets */
+    font-size: 1.5em;
     position: absolute;
     left: 0;
-    top: 0; /* Align with the text */
+    top: 0;
 }
 
-#fb1 ul ul { /* Styling for nested unordered lists */
-    margin-top: 10px; /* Space above nested list */
-    margin-bottom: 5px; /* Space below nested list */
-    padding-left: 20px; /* Indent nested list */
-    list-style-type: disc; /* Use default discs for nested lists */
-    font-size: 0.95em; /* Slightly smaller font for sub-points */
+#fb1 ul ul, #fb2 ul ul { /* Apply to both fact boxes' nested ul */
+    margin-top: 10px;
+    margin-bottom: 5px;
+    padding-left: 20px;
+    list-style-type: disc;
+    font-size: 0.95em;
 }
 
-#fb1 ul ul li {
-    margin-bottom: 8px; /* Space between nested list items */
-    font-size: 1em; /* Reset font size for nested items */
-    padding-left: 0; /* No extra padding for default discs */
+#fb1 ul ul li, #fb2 ul ul li { /* Apply to both fact boxes' nested li */
+    margin-bottom: 8px;
+    font-size: 1em;
+    padding-left: 0;
 }
 
-#fb1 ul ul li::before {
-    content: none; /* Remove custom bullet for nested lists */
+#fb1 ul ul li::before, #fb2 ul ul li::before { /* Remove custom bullet for nested lists */
+    content: none;
 }
     </style>
     <script>
@@ -125,6 +134,14 @@
         function showSlide3() {
             document.getElementById("slide2").style.display = "none"
             document.getElementById("slide3").style.display = "block"
+        }
+        function showSlide4() {
+            document.getElementById("slide3").style.display = "none"
+            document.getElementById("slide4").style.display = "block"
+        }
+        function showSlide5() {
+            document.getElementById("slide4").style.display = "none"
+            document.getElementById("slide5").style.display = "block"
         }
     </script>
 </head>
@@ -160,10 +177,64 @@
 
     </div>
     <div class="slide" id="slide3">
+        <center>
         <h1 id="heading3">Lakshadweep Islands</h1>
         <div id="fb2" class="fb">
-            In development
+            <ul>
+                    <li>Location & Geography:
+                        <ul>
+                            <li>Located in the Arabian Sea, off the coast of Kerala.</li>
+                            <!--<li>Smallest Union Territory of India, comprising 36 islands.</li>-->
+                            <li>Only 10 of the islands are inhabited.</li>
+                            <li>Meaning "one hundred thousand islands" in Sanskrit.</li>
+                        </ul>
+                    </li>
+                    <li>Unique Features:
+                        <ul>
+                            <li>Known for pristine white sandy beaches and clear turquoise waters.</li>
+                            <li>Rich in marine life, vibrant coral reefs, and lagoons.</li>
+                        </ul>
+                    </li>
+                </ul>
         </div>
+        <button onclick="showSlide4()">Move Towards Next Slide</button>
+    </center>
+    </div>
+    <div class="slide" id="slide4">
+        <center>
+            <h1>Strategic Advantages to India from Islands</h1>
+            <div id="fb2" class="fb">
+                <ul>
+                    <li>Defense:
+                        <ul>
+                            <li>Provide maintenance and surveillance stations for navy</li>
+                            <li>Helps monitor seas, control chokepoints</li>
+                            <li>Islands like the APJ Abdul Kalam, help making missile test pads</li>
+                        </ul>
+                    </li>
+                    <li>India might have found oil in the Andaman Sea</li>
+                    <li>Economic
+                        <ul>
+                            <li>Islands can promote tourism</li>
+                            <li>Islands can promote fishing and such industries</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <button onclick="showSlide5()">Move Towards the Next Slide</button>
+        </center>
+    </div>
+    <div class="slide" id="slide5">
+        <center>
+            <h1>Gallery</h1>
+            <div id="fb2" class="fb">
+                <img src="https://cdn.experienceandamans.com/images/Andaman-Islands-Map.jpg" alt="IMage Not Loading" width="100" height="100"> <img src="https://www.reuters.com/graphics/INDIA-SATELLITE-WEAPON/0100918Q1RV/images/abdulkalam.jpg" height="100" width="100" alt=""><br>
+                <span>Andaman and Nicobar Islands</span> <br>
+                <img src="https://growingwithnemit.com/wp-content/uploads/2023/02/map-of-Lakshadweep.jpg" alt="Image Not Loading" width="100" height="100">
+                <br><span>Lakshadweep</span> <br>
+            </div>
+            <button><a href="./model.html">See an impressive 3D model!</a></button>
+        </center>
     </div>
     
 </body>
