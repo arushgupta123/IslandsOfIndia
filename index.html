@@ -4,8 +4,167 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Islands of India</title>
+    <style>
+        html, body {
+    height: 100%; /* Make html and body take full viewport height */
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+}
+        body{
+			/*height: 100vh;
+			width: 100vw;*/
+			background-image: linear-gradient(to right, #20BDFF, #A5FECB);
+		}
+
+		::-webkit-scrollbar {
+            display: none;
+        }
+        .slide {
+            display: none; /* This rule hides other slides, not #slide1 which has slideintro class */
+            border: 1px solid black;
+            height: 100%; /* Now 100% of body's height */
+            width: 100%; /* Now 100% of body's width */
+            position: relative; /* CRUCIAL: Establishes positioning context for absolute children */
+            box-sizing: border-box; /* Include padding/border in total dimensions */
+            /* Added padding-top to give space above the h1 when using <center> */
+            padding-top: 50px; /* Adjust as needed */
+        }
+
+        #slide1 {
+            border: 1px solid black;
+            height: 100%; /* Now 100% of body's height */
+            width: 100%; /* Now 100% of body's width */
+            position: relative; /* CRUCIAL: Establishes positioning context for absolute children */
+            box-sizing: border-box; /* Include padding/border in total dimensions */
+            /* Added padding-top to give space above the h1 when using <center> */
+            padding-top: 50px; /* Adjust as needed */
+        }
+
+        #heading1 {
+            font-size: 100px;
+            /* No margin needed here as <center> handles basic positioning, but good to reset if issues */
+            margin: 0;
+        }
+
+        button {
+            position: absolute; /* Take button out of normal document flow */
+            bottom: 30px; /* Position 30px from the bottom of its parent (#slide1) */
+            width: 90%;
+            height: 40px;
+            color: whitesmoke;
+            background-color: rgb(70, 43, 226);
+            
+            /* To center an absolutely positioned element horizontally: */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        #slide2{
+            display: none;
+        }
+
+
+        #fb1 {
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white background */
+    border-radius: 15px; /* Rounded corners for a softer look */
+    padding: 30px; /* Ample space inside the box */
+    margin-top: 20px; /* Space above the fact box */
+    margin-bottom: 20px; /* Space below the fact box */
+    width: 80%; /* Control the width, make it responsive */
+    max-width: 800px; /* Prevent it from getting too wide on large screens */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    text-align: left; /* Align text to the left within the box */
+    color: #333; /* Darker text for readability */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern, readable font */
+    line-height: 1.6; /* Good line spacing for readability */
+}
+
+#fb1 ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding from ul */
+}
+
+#fb1 ul li {
+    margin-bottom: 15px; /* Space between main list items */
+    font-size: 1.1em; /* Slightly larger font for main points */
+    padding-left: 25px; /* Indent for custom bullet */
+    position: relative; /* For custom bullet positioning */
+}
+
+#fb1 ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: rgb(0, 128, 87); /* Match bullet color to your gradient */
+    font-size: 1.5em; /* Make bullet larger */
+    position: absolute;
+    left: 0;
+    top: 0; /* Align with the text */
+}
+
+#fb1 ul ul { /* Styling for nested unordered lists */
+    margin-top: 10px; /* Space above nested list */
+    margin-bottom: 5px; /* Space below nested list */
+    padding-left: 20px; /* Indent nested list */
+    list-style-type: disc; /* Use default discs for nested lists */
+    font-size: 0.95em; /* Slightly smaller font for sub-points */
+}
+
+#fb1 ul ul li {
+    margin-bottom: 8px; /* Space between nested list items */
+    font-size: 1em; /* Reset font size for nested items */
+    padding-left: 0; /* No extra padding for default discs */
+}
+
+#fb1 ul ul li::before {
+    content: none; /* Remove custom bullet for nested lists */
+}
+    </style>
+    <script>
+        function showSlide2() {
+            document.getElementById("slide1").style.display = "none"
+            document.getElementById("slide2").style.display = "block"
+        }
+        function showSlide3() {
+            document.getElementById("slide2").style.display = "none"
+            document.getElementById("slide3").style.display = "block"
+        }
+    </script>
 </head>
 <body>
+    <div class="slideintro" id="slide1">
+        <center>
+        <h1 id="heading1">The Islands of India</h1> 
+        <button id="b1s1" class="buttons" onclick="showSlide2()">Move Towards Next Slide</button>
+        </center>
+        
+    </div>
+    <div class="slide" id="slide2">
+        <center>
+            <h1 id="heading2">The Andaman and Nicobar Islands</h1>
+            <div id="fb1">
+                <ul>
+                    <li>Location & Geography:
+                        <ul>
+                            <li>Located in the Bay of Bengal, closer to Southeast Asia.</li>
+                            <li>Made up of 572 islands, of which around 37 are inhabited.</li>
+                            <li>It is divided into two groups: Andaman Islands (North) and Nicobar Islands (South)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        Volcanic and hilly terrain, tropical rainforests.
+                    </li>
+                    <li>Home to Barren Island, India’s only active volcano.</li>
+                    <li>Surrounded by coral reefs and rich marine biodiversity.</li>
+                </ul>
+            </div>
+            <button onclick="showSlide3()">Move Towards Next Slide</button>
+        </center>
+
+    </div>
+    <div class="slide" id="slide3">
+        <h1 id="heading3">Lakshadweep Islands</h1>
+        <div id="fb2" class="fb">
+            In development
+        </div>
+    </div>
     
 </body>
 </html>
