@@ -6,9 +6,9 @@
     <title>The Islands of India</title>
     <style>
         html, body {
-    height: 100%; /* Make html and body take full viewport height */
-    margin: 0; /* Remove default body margin */
-    padding: 0; /* Remove default body padding */
+    height: 100%; 
+    margin: 0; 
+    padding: 0; 
 }
         body{
 			/*height: 100vh;
@@ -20,41 +20,37 @@
             display: none;
         }
         .slide {
-            display: none; /* This rule hides other slides, not #slide1 which has slideintro class */
+            display: none;
             border: 1px solid black;
-            height: 100%; /* Now 100% of body's height */
-            width: 100%; /* Now 100% of body's width */
-            position: relative; /* CRUCIAL: Establishes positioning context for absolute children */
-            box-sizing: border-box; /* Include padding/border in total dimensions */
-            /* Added padding-top to give space above the h1 when using <center> */
-            padding-top: 50px; /* Adjust as needed */
+            height: 100%;
+            width: 100%; 
+            position: relative; 
+            box-sizing: border-box;
+            padding-top: 50px; 
         }
 
         #slide1 {
             border: 1px solid black;
-            height: 100%; /* Now 100% of body's height */
-            width: 100%; /* Now 100% of body's width */
-            position: relative; /* CRUCIAL: Establishes positioning context for absolute children */
-            box-sizing: border-box; /* Include padding/border in total dimensions */
-            /* Added padding-top to give space above the h1 when using <center> */
-            padding-top: 50px; /* Adjust as needed */
+            height: 100%; 
+            width: 100%; 
+            position: relative; 
+            box-sizing: border-box; 
+
+            padding-top: 50px; 
         }
 
         #heading1 {
             font-size: 100px;
-            /* No margin needed here as <center> handles basic positioning, but good to reset if issues */
             margin: 0;
         }
 
         button {
-            position: absolute; /* Take button out of normal document flow */
-            bottom: 30px; /* Position 30px from the bottom of its parent (#slide1) */
+            position: absolute;
+            bottom: 30px; 
             width: 90%;
             height: 40px;
             color: whitesmoke;
             background-color: rgb(70, 43, 226);
-            
-            /* To center an absolutely positioned element horizontally: */
             left: 50%;
             transform: translateX(-50%);
         }
@@ -63,17 +59,17 @@
         }
 
 
-        #heading2, #heading3 { /* Applied to both heading2 and heading3 */
+        #heading2, #heading3 { 
     font-size: 80px;
-    color: #333; /* Darker text for readability on the light fact box */
+    color: #333;
     margin-top: 0;
     margin-bottom: 30px;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); /* Subtle text shadow */
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1); 
 }
 
-/* Re-using the #fb1 styles for #fb2 to maintain consistency */
+
 #fb1, #fb2 {
-    background-color: rgba(250, 250, 250, 0.95); /* A clean, almost white with slight opacity for the fact box */
+    background-color: rgba(250, 250, 250, 0.95); 
     border-radius: 15px;
     padding: 30px;
     margin-top: 20px;
@@ -82,33 +78,33 @@
     max-width: 800px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     text-align: left;
-    color: #333; /* Darker text for readability */
+    color: #333; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
 }
 
-#fb1 ul, #fb2 ul { /* Apply to both fact boxes' ul */
+#fb1 ul, #fb2 ul { 
     list-style-type: none;
     padding: 0;
 }
 
-#fb1 ul li, #fb2 ul li { /* Apply to both fact boxes' li */
+#fb1 ul li, #fb2 ul li { 
     margin-bottom: 15px;
     font-size: 1.1em;
     padding-left: 25px;
     position: relative;
 }
 
-#fb1 ul li::before, #fb2 ul li::before { /* Apply to both fact boxes' custom bullets */
+#fb1 ul li::before, #fb2 ul li::before { 
     content: '•';
-    color: #0072FF; /* Using the darker blue from your body gradient for bullets */
+    color: #0072FF; 
     font-size: 1.5em;
     position: absolute;
     left: 0;
     top: 0;
 }
 
-#fb1 ul ul, #fb2 ul ul { /* Apply to both fact boxes' nested ul */
+#fb1 ul ul, #fb2 ul ul { 
     margin-top: 10px;
     margin-bottom: 5px;
     padding-left: 20px;
@@ -116,13 +112,13 @@
     font-size: 0.95em;
 }
 
-#fb1 ul ul li, #fb2 ul ul li { /* Apply to both fact boxes' nested li */
+#fb1 ul ul li, #fb2 ul ul li { 
     margin-bottom: 8px;
     font-size: 1em;
     padding-left: 0;
 }
 
-#fb1 ul ul li::before, #fb2 ul ul li::before { /* Remove custom bullet for nested lists */
+#fb1 ul ul li::before, #fb2 ul ul li::before { 
     content: none;
 }
     </style>
